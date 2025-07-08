@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パーソナルカラー診断 - 管理者ダッシュボード</title>
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>パーソナルカラー診断 - 管理者ダッシュボード</h1>
+        
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>総診断数</h3>
+                <div id="total-results" class="stat-number">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>今日の診断数</h3>
+                <div id="today-results" class="stat-number">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>人気のタイプ</h3>
+                <div id="popular-type" class="stat-text">-</div>
+            </div>
+        </div>
+
+        <div class="type-distribution">
+            <h2>タイプ別分布</h2>
+            <div class="type-chart">
+                <div class="type-bar spring">
+                    <span>スプリング</span>
+                    <div class="bar-fill" id="spring-bar"></div>
+                    <span id="spring-count">0</span>
+                </div>
+                <div class="type-bar summer">
+                    <span>サマー</span>
+                    <div class="bar-fill" id="summer-bar"></div>
+                    <span id="summer-count">0</span>
+                </div>
+                <div class="type-bar autumn">
+                    <span>オータム</span>
+                    <div class="bar-fill" id="autumn-bar"></div>
+                    <span id="autumn-count">0</span>
+                </div>
+                <div class="type-bar winter">
+                    <span>ウィンター</span>
+                    <div class="bar-fill" id="winter-bar"></div>
+                    <span id="winter-count">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="recent-results">
+            <h2>最近の診断結果</h2>
+            <div id="results-list" class="results-list">
+                <!-- 結果はJavaScriptで動的に生成 -->
+            </div>
+        </div>
+
+        <div class="export-section">
+            <h2>データエクスポート</h2>
+            <button id="export-csv" class="btn">CSVダウンロード</button>
+            <button id="export-json" class="btn">JSONダウンロード</button>
+        </div>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html> 
